@@ -6,4 +6,4 @@ ADD target/*.war /usr/local/tomcat/webapps/
 
 EXPOSE 8080
 
-CMD [“run”]
+CMD ["sh.startup.sh",“run”]
