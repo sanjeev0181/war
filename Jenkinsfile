@@ -10,15 +10,15 @@ pipeline {
             }
         }
         
-        // stage("uploading sonarqube"){
-        //     steps {
-        //         script {
-        //             withSonarQubeEnv(credentialsId: 'newsonar-tocken') {
-        //             sh "mvn sonar:sonar"
-        //             }
-        //         }
-        //     }
-        // }
+        stage("uploading sonarqube"){
+            steps {
+                script {
+                    withSonarQubeEnv(credentialsId: 'sonarqube') {
+                    sh "mvn sonar:sonar"
+                    }
+                }
+            }
+        }
     }
 
 }
