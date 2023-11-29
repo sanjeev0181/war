@@ -3,12 +3,12 @@ pipeline {
      options {
         buildDiscarder(logRotator(numToKeepStr: '2'))
     }
-    // stages {
-    //     stage("mvn build"){
-    //         steps {
-    //             sh "mvn clean package"
-    //         }
-    //     }
+     stages {
+        // stage("mvn build"){
+        //     steps {
+        //         sh "mvn clean package"
+        //     }
+        // }
         
         stage("uploading sonarqube"){
             steps {
@@ -19,7 +19,7 @@ pipeline {
                 }
             }
         }
-    //}
+    }
 
 }
        
